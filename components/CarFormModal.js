@@ -43,7 +43,14 @@ const CarFormModal = ({ car, onClose, onSave, drivers = [] }) => {
         <h3 className="text-lg font-semibold text-gray-700 mb-2">Dados do Proprietário</h3>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <input type="text" name="ownerName" placeholder="Nome do Proprietário" value={formData.ownerName} onChange={handleChange} className="w-full bg-gray-100 p-3 rounded-lg border focus:ring-2 focus:ring-blue-500"/>
-          <input type="number" name="commissionPercentage" placeholder="Comissão:ring-blue-500"/>
+          <input
+            type="number"
+            name="commissionPercentage"
+            placeholder="Comissao (%)"
+            value={formData.commissionPercentage}
+            onChange={handleChange}
+            className="w-full bg-gray-100 p-3 rounded-lg border focus:ring-2 focus:ring-blue-500"
+          />
         </div>
         <div className="flex flex-col sm:flex-row gap-4 mt-6">
           <button onClick={onClose} className="w-full bg-gray-500 text-white font-bold py-3 px-6 rounded-lg hover:bg-gray-600">Cancelar</button>
